@@ -1,6 +1,5 @@
-{"prompt": "", "completion": "\nAssistant: Circle."}
 {"prompt": "User: Hey. It's Lamar with HH Transportation. How are you doing today?", "completion": "Assistant: I'm good, sir. What can I do for you?"}
-{"prompt": "User: Calling seeing you had a Springfield, Illinois today going out to Topeka, Kansas.", "completion": "Assistant: Sure. Can I get your MC?"}
+{"prompt": "User: Calling seeing you had a Springfield, Illinois today going out to Topeka, Kansas. Sure.", "completion": "Assistant: Can I get your MC?"}
 {"prompt": "User: Sure. MC is 569485.", "completion": "Assistant: H and H or H. Do you see a reference number on that posting?"}
 {"prompt": "User: There is one in the comments. Looks like 1594891.", "completion": "Assistant: This load is gonna be, Morton, Illinois to Beloit, Kansas. Morton, Illinois to Beloit, Kansas. I can give you ZIP codes if you need."}
 {"prompt": "User: Let's see here. Maybe I'll be able to pull it up. I think Morton well, I know Morton's kinda the opposite direction of where we're, where's my truck? Because my truck's actually in Effingham. Mhmm.", "completion": "Assistant: Correct. Yeah."}
