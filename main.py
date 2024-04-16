@@ -11,10 +11,9 @@ from deepgram import (
     FileSource,
 )
 
-
+# transcribe file
 def transcribe_file(AUDIO_FILE):
     try:
-        # STEP 1 Create a Deepgram client using the API key
         deepgram = DeepgramClient("eb4a2c767aec1474b4887a68ba1659a8d2476364")
 
         with open(AUDIO_FILE, "rb") as file:
@@ -24,17 +23,16 @@ def transcribe_file(AUDIO_FILE):
             "buffer": buffer_data,
         }
 
-        #STEP 2: Configure Deepgram options for audio analysis
+        #talk about diarizing
         options = PrerecordedOptions(
             model="nova-2",
             smart_format=True,
             diarize=True
         )
 
-        # STEP 3: Call the transcribe_file method with the text payload and options
+        # main api call
         response = deepgram.listen.prerecorded.v("1").transcribe_file(payload, options)
 
-        # STEP 4: Print the response
         output_file = re.sub(r'\.mp3$', '.jsonl', AUDIO_FILE)
         process_transcription(response, output_file)
 
@@ -42,7 +40,7 @@ def transcribe_file(AUDIO_FILE):
         print(f"Exception: {e}")
 
 
-
+# makes both cases of jsonl and picks the better one (then prints it)
 def process_transcription(response, output_file):
     labels_one = generate_labels(response, "Speaker 0", "Speaker 1")
     labels_two = generate_labels(response, "Speaker 1", "Speaker 0")
